@@ -26,7 +26,7 @@ public class HomeController {
 	@RequestMapping(value="/signUp", method=RequestMethod.GET)
 	public String signUp() {
 		logger.info("Sign up");
-		return "signUp";
+		return "sign/signUp";
 	}
 }
 
