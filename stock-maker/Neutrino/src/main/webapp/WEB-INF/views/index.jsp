@@ -56,9 +56,9 @@
 			  <span	class="caret"></span>
 			</a>
 			<ul	class="dropdown-menu">
-			  <li><a href="signUp">Sign Up</a></li>
+			  <li><a href="login">Login</a></li>
 			  <li class="divider"></li>
-			  <li><a href="#">Sign Out</a></li>
+			  <li><a href="signUp">Sign Up</a></li>
 			</ul>
 		  </div>
 		  <div class="nav-collapse">
