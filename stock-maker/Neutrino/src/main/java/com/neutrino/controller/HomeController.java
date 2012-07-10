@@ -1,4 +1,4 @@
-package com.neutrino.spring;
+package com.neutrino.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -28,5 +28,11 @@ public class HomeController {
 		logger.info("Sign up");
 		return "sign/signUp";
 	}
+	
+	@RequestMapping(value="/login", method=RequestMethod.GET)
+	public String login() {
+		logger.info("Login");
+		return "sign/login";
+	}	
 }
 
