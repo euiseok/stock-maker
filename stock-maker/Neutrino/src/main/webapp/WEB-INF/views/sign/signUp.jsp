@@ -6,7 +6,6 @@
 	<meta http-equiv="Content-Type"	content="text/html;	charset=UTF-8">
 	<meta charset="utf-8">
 	<title>Spring education</title>
-	<!-- viewport :	Webkit 기반	브라우져의 설정	/ Device 설정에	기반 -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="HTML5	base Spring	code education">
 	<meta name="author"	content="euiseok.yang@gmail.com">
@@ -42,34 +41,55 @@
   <body>
 	<!-- nav -->
 	<div class="navbar navbar-fixed-top">
-	  <div class="navbar-inner">
-		<div class="container-fluid">
-		  <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-		  </a>
-		  <a class="brand" href="/Neutrino">Spring</a>
-		  <div class="btn-group	pull-right">
-			<a class="btn dropdown-toggle" data-toggle="dropdown" href="">
-			  <i class="icon-user"></i>User Name
-			  <span	class="caret"></span>
-			</a>
-			<ul	class="dropdown-menu">
-			  <li><a href="signUp">My page</a></li>
-			  <li class="divider"></li>
-			  <li><a href="#">Sign Out</a></li>
-			</ul>
-		  </div>
-		  <div class="nav-collapse">
-			<ul	class="nav">
-			  <li class="active"><a	href="#">Home</a></li>
-			  <li><a href="#about">About</a></li>
-			  <li><a href="#contact">Contact</a></li>
-			</ul>
-		  </div><!--/.nav-collapse -->
-		</div>
-	  </div>
+	  <div class="navbar">
+	    <div class="navbar-inner">
+	      <div class="container">
+	        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+	          <span class="icon-bar"></span>
+	          <span class="icon-bar"></span>
+	          <span class="icon-bar"></span>
+	        </a>
+	        <a class="brand" href="/spring">Spring</a>
+	        <div class="nav-collapse">
+	          <ul class="nav">
+	            <li class="active"><a href="#">Home</a></li>
+	            <li><a href="#">Link</a></li>
+	            <li><a href="#">Link</a></li>
+	            <li><a href="#">Link</a></li>
+	            <li class="dropdown">
+	              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+	              <ul class="dropdown-menu">
+	                <li><a href="#">Action</a></li>
+	                <li><a href="#">Another action</a></li>
+	                <li><a href="#">Something else here</a></li>
+	                <li class="divider"></li>
+	                <li class="nav-header">Nav header</li>
+	                <li><a href="#">Separated link</a></li>
+	                <li><a href="#">One more separated link</a></li>
+	              </ul>
+	            </li>
+	          </ul>
+	          <form class="navbar-search pull-left" action="">
+	            <input type="text" class="search-query span2" placeholder="Search">
+	          </form>
+	          <ul class="nav pull-right">
+	            <li><a href="#">Link</a></li>
+	            <li class="divider-vertical"></li>
+	            <li class="dropdown">
+	              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+	              <ul class="dropdown-menu">
+	                <li><a href="#">Action</a></li>
+	                <li><a href="#">Another action</a></li>
+	                <li><a href="#">Something else here</a></li>
+	                <li class="divider"></li>
+	                <li><a href="#">Separated link</a></li>
+	              </ul>
+	            </li>
+	          </ul>
+	        </div><!-- /.nav-collapse -->
+	      </div>
+	    </div><!-- /navbar-inner -->
+	  </div><!-- /navbar -->
 	</div>
 
 	<div class="container-fluid">
@@ -77,10 +97,53 @@
 		<div class="span12">
 		  <div class="page-header">
 		    <h1>Sign up</h1>
-		    <hr>
-		    <p>Join with us</p>
 		  </div>
 		  <div class="row-fluid">
+			<form class="form-horizontal">
+				<div class="control-group">
+					<label class="control-label" for="email"><code>E-mail</code></label>
+					<div class="controls">
+						<input type="text" class="input-xlarge" id="email">
+						<p class="help-block">e-mail을 입력하세요.</p>
+					</div>
+
+					<label class="control-label" for="password"><code>비밀번호</code></label>
+					<div class="controls">
+						<input type="text" class="input-xlarge" id="password">
+						<p class="help-block">비밀번호를 입력하세요.</p>
+					</div>
+					
+					<label class="control-label" for="passwordRepeat"><code>비밀번호 reapeat</code></label>
+					<div class="controls">
+						<input type="text" class="input-xlarge" id="passwordRepeat">
+						<p class="help-block">비밀번호를 다시 입력하세요.</p>
+					</div>
+										
+					<label class="control-label" for="name"><code>이름</code></label>
+					<div class="controls">
+						<input type="text" class="input-xlarge" id="name">
+						<p class="help-block">이름을 입력하세요.</p>
+					</div>
+										
+					<label class="control-label" for="regionCode"><code>지역선택</code></label>
+					<div class="controls docs-input-sizes">
+						<select class="span2" id="regionCode">
+							<option value='A01'>Asia</option>
+							<option value='B01'>Europe</option>
+							<option value='C01'>Africa</option>
+							<option value='D01'>Oceania</option>
+							<option value='E01'>North America</option>
+							<option value='F01'>South America</option>
+						</select>
+						<p class="help-block">지역코드를 선택해 주세요</p>
+					</div>					
+				</div>
+
+				<div class="form-actions">
+					<button type="submit" class="btn btn-primary" id="virSave">Save</button>
+					<button class="btn">Cancel</button>
+				</div>
+			</form>
 		  </div><!--/row-->
 		</div><!--/span-->
 	  </div><!--/row-->
