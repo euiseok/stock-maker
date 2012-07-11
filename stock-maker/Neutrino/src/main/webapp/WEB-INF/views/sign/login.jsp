@@ -6,7 +6,6 @@
 	<meta http-equiv="Content-Type"	content="text/html;	charset=UTF-8">
 	<meta charset="utf-8">
 	<title>Spring education</title>
-	<!-- viewport :	Webkit 기반	브라우져의 설정	/ Device 설정에	기반 -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="HTML5	base Spring	code education">
 	<meta name="author"	content="euiseok.yang@gmail.com">
@@ -50,7 +49,7 @@
 	          <span class="icon-bar"></span>
 	          <span class="icon-bar"></span>
 	        </a>
-	        <a class="brand" href="#">Project name</a>
+	        <a class="brand" href="/spring">Spring</a>
 	        <div class="nav-collapse">
 	          <ul class="nav">
 	            <li class="active"><a href="#">Home</a></li>
@@ -98,9 +97,17 @@
 		<div class="span12">
 		  <div class="page-header">
 		    <h1>Log in</h1>
-		    <hr>
 		  </div>
 		  <div class="row-fluid">
+			<form class="well form-inline">
+			  <label>User name</label>
+			  <input type="text" class="input-small" placeholder="Email">
+			  <input type="password" class="input-small" placeholder="Password">
+			  <label class="checkbox">
+			    <input type="checkbox"> Remember me
+			  </label>
+			  <button type="submit" class="btn">Sign in</button>
+			</form>
 		  </div><!--/row-->
 		</div><!--/span-->
 	  </div><!--/row-->
@@ -108,7 +115,7 @@
 	  <hr>
 
 	  <footer>
-		<p>© euiseok.yang 2012</p>
+		<p>Â© euiseok.yang 2012</p>
 	  </footer>
 
 	</div><!--/.fluid-container-->
