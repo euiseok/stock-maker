@@ -26,5 +26,6 @@ public class MemberDaoHibernate extends HibernateDaoSupport implements MemberDao
 			}});
 	}
 	
+	
 
 }
