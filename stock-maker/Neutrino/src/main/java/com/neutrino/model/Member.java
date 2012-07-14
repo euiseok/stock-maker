@@ -1,11 +1,16 @@
 package com.neutrino.model;
 
-import javax.xml.bind.annotation.XmlRootElement;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
-@XmlRootElement
+@Entity
 public class Member {
-	private String name;
+	@Id
 	private String email;
+	
+	@Column(length=100)
+	private String name;
 	
 	public String getName() {
 		return name;
