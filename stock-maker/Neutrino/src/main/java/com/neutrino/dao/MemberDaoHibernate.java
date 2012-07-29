@@ -21,7 +21,7 @@ public class MemberDaoHibernate extends HibernateDaoSupport implements MemberDao
 		return (Member)getHibernateTemplate().execute(new HibernateCallback(){
 			@Override
 			public Object doInHibernate(Session session){
-				Query query = getSession().getNamedQuery("com.neutrino.sql.memberByEmail");
+				Query query = getSession().getNamedQuery("com.neutrino.model.memberByEmail");
 				query.setString("email",email);
 				return (Member)query.uniqueResult();
 			}});
