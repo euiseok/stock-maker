@@ -7,11 +7,9 @@ import org.hibernate.Query;
 import org.hibernate.Session;
 import org.springframework.orm.hibernate3.HibernateCallback;
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
-import org.springframework.stereotype.Component;
 
 import com.neutrino.model.Member;
 
-@Component
 public class MemberDaoHibernate extends HibernateDaoSupport implements MemberDao{
 
 	private static Logger log = Logger.getLogger(MemberDaoHibernate.class);
@@ -28,7 +26,4 @@ public class MemberDaoHibernate extends HibernateDaoSupport implements MemberDao
 				return (Member)query.uniqueResult();
 			}});
 	}
-	
-	
-
 }
