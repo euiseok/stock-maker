@@ -45,13 +45,12 @@
 		</property>
 	</bean>
 	
-	<!-- Data Access Bean -->
-	<bean id="memberDAO" class="com.neutrino.dao.MemberDaoHibernate">
+	<bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor"/>
+		
+	<!-- DI Beans list-->
+	<bean id="memberDaoImpl" class="com.neutrino.dao.MemberDaoHibernate">
 		<property name="sessionFactory" ref="sessionFactory"/>
 	</bean>
-	
-	<!-- DI Beans list-->
-	<bean id="memberDaoImpl" class="com.neutrino.dao.MemberDaoHibernate"/>
 	<bean id="signServiceImpl" class="com.neutrino.service.SignServiceImpl"/>
 	
 	<!-- Message Converter -->
