@@ -172,5 +172,33 @@
 	<script	src="resources/js/bootstrap-collapse.js"></script>
 	<script	src="resources/js/bootstrap-carousel.js"></script>
 	<script	src="resources/js/bootstrap-typeahead.js"></script>
+	<script	src="resources/js/jquery.blockUI.js"></script>
+	
+	<script type="text/javascript">
+		$(document).ready(function(){
+			//Loading indicator
+			//공통 JS로 추출 바람
+			$(document).ajaxStart(function(){
+				$.blockUI({message:'<h3><img src="resources/images/ajax-loader.gif"/>Processing..</h3>'});
+				})
+				.ajaxStop(function(){
+					$.unblockUI();
+				});
+			
+			// ------------------ Event area ---------------------
+			$('#email').blur(function(){
+				if($(this).val() == ''){
+					alert("Email주소를 입력해 주세요");
+					return;
+				}else{
+					$.getJSON('sign/checkEmail/'+$(this).val(),function(result){
+						if(result.duplicated == true){
+							alret("이미 등록된 Email 주소입니다");
+						}
+					});
+				}
+			});
+		});
+	</script>
   </body>
 </html>
