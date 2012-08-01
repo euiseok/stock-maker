@@ -18,7 +18,7 @@ public class SignServiceImpl implements SingService {
 	public boolean isRegisteredEmail(String email) {
 		logger.info("[ServiceImpl CALL] isRegisteredEmail :" + email);
 		
-		if(memberDao.findById(email).equals(null)){
+		if(memberDao.findById(email)==null){
 			return false;
 		}else{
 			return true;

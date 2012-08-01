@@ -192,6 +192,7 @@
 					return;
 				}else{
 					$.getJSON('sign/checkEmail/'+$(this).val(),function(result){
+						alert(result);
 						if(result.duplicated == true){
 							alret("이미 등록된 Email 주소입니다");
 						}
