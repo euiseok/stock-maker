@@ -2,17 +2,17 @@ package com.neutrino.dao;
 
 
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.springframework.orm.hibernate3.HibernateCallback;
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
-
 import com.neutrino.model.Member;
 
 public class MemberDaoHibernate extends HibernateDaoSupport implements MemberDao{
 
-	private static Logger logger = Logger.getLogger(MemberDaoHibernate.class);
+	private static final Logger logger = LoggerFactory.getLogger(MemberDaoHibernate.class);
 	
 	@SuppressWarnings({ "unchecked", "rawtypes" })
 	public Member findById(final String email) {
