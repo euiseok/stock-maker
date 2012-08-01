@@ -14,6 +14,11 @@ import javax.persistence.TemporalType;
 
 @Entity
 @Table(name="MEMBER")
+@NamedQueries({
+	@NamedQuery(name="com.neutrino.model.memberByEmail",
+			query="from Member as member where email=:email"
+	)
+})
 public class Member {
 	@Id
 	@Column(name="EMAIL",length=50)

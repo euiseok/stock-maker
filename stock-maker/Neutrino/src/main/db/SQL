@@ -5,8 +5,10 @@ use neutrino;
 create table member(
   email VARCHAR(50) PRIMARY KEY,
   name VARCHAR(50),
+  password VARCHAR(20),
+  region CHAR(2),
   joindate DATE);
   
-grant all privileges on neutrino.* to spring@'%' identified by 'spring@4321' with grant option;
+grant all privileges on neutrino.* to spring@'localhost' identified by 'spring@4321' with grant option;
 
 commit;

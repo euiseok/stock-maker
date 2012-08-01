@@ -12,7 +12,7 @@ import com.neutrino.model.Member;
 
 public class MemberDaoHibernate extends HibernateDaoSupport implements MemberDao{
 
-	private static Logger log = Logger.getLogger(MemberDaoHibernate.class);
+	private static Logger logger = Logger.getLogger(MemberDaoHibernate.class);
 	
 	@SuppressWarnings({ "unchecked", "rawtypes" })
 	public Member findById(final String email) {
