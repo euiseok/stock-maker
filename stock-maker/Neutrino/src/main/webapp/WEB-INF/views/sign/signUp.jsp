@@ -106,7 +106,7 @@
 						<input type="text" class="input-xlarge" id="email">
 						<p class="help-block">e-mail을 입력하세요.</p>
 					</div>
-
+					
 					<label class="control-label" for="password"><code>비밀번호</code></label>
 					<div class="controls">
 						<input type="text" class="input-xlarge" id="password">
@@ -128,12 +128,12 @@
 					<label class="control-label" for="regionCode"><code>지역선택</code></label>
 					<div class="controls docs-input-sizes">
 						<select class="span2" id="regionCode">
-							<option value='A01'>Asia</option>
-							<option value='B01'>Europe</option>
-							<option value='C01'>Africa</option>
-							<option value='D01'>Oceania</option>
-							<option value='E01'>North America</option>
-							<option value='F01'>South America</option>
+							<option value='A1'>Asia</option>
+							<option value='B1'>Europe</option>
+							<option value='C1'>Africa</option>
+							<option value='D1'>Oceania</option>
+							<option value='E1'>North America</option>
+							<option value='F1'>South America</option>
 						</select>
 						<p class="help-block">지역코드를 선택해 주세요</p>
 					</div>					
