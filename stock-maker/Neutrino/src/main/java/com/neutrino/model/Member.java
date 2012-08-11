@@ -5,6 +5,8 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
@@ -30,14 +32,16 @@ public class Member {
 	@Column(name="PASSWORD",length=20,nullable=false)
 	private String password;
 	
-	@Column(name="REGION",length=2)
-	private String region;
+	@Enumerated(EnumType.STRING)
+	private Region region;
 	
 	@Temporal(TemporalType.DATE)
 	@Column(name="JOINDATE",nullable=false)
 	private Date joindate;
 	
-	public Member(String email, String name, String password, String region,
+	public Member(){}
+	
+	public Member(String email, String name, String password, Region region,
 			Date joindate) {
 		super();
 		this.email = email;
@@ -71,11 +75,11 @@ public class Member {
 		this.password = password;
 	}
 
-	public String getRegion() {
+	public Region getRegion() {
 		return region;
 	}
 
-	public void setRegion(String region) {
+	public void setRegion(Region region) {
 		this.region = region;
 	}
 
