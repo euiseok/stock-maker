@@ -11,9 +11,10 @@ C:\real\Neutrino\src\main\java\com\neutrino\common\aspect\LoggingPointCut.java
 C:\real\Neutrino\src\main\java\com\neutrino\service\SignServiceImpl.java
 C:\real\Neutrino\src\main\java\com\neutrino\model\Result.java
 C:\real\Neutrino\src\main\java\com\neutrino\model\Member.java
+C:\real\Neutrino\src\main\java\com\neutrino\model\Region.java
 C:\real\Neutrino\src\main\java\com\neutrino\common\aspect\LoggingAspect.java
 C:\real\Neutrino\src\main\java\com\neutrino\service\SingService.java
+C:\real\Neutrino\src\main\java\com\neutrino\controller\SignController.java
 C:\real\Neutrino\src\main\java\com\neutrino\dao\MemberDao.java
 C:\real\Neutrino\src\main\java\com\neutrino\dao\MemberDaoHibernate.java
 C:\real\Neutrino\src\main\java\com\neutrino\controller\HomeController.java
-C:\real\Neutrino\src\main\java\com\neutrino\controller\AjaxController.java

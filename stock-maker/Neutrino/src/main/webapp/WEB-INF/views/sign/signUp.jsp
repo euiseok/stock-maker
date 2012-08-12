@@ -99,7 +99,7 @@
 		    <h1>Sign up</h1>
 		  </div>
 		  <div class="row-fluid">
-			<form class="form-horizontal">
+			<form class="form-horizontal" id="member">
 				<div class="control-group">
 					<label class="control-label" for="email"><code>E-mail</code></label>
 					<div class="controls">
