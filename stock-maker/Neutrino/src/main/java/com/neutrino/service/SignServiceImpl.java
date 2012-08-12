@@ -1,5 +1,8 @@
 package com.neutrino.service;
 
+import java.sql.Date;
+import java.text.SimpleDateFormat;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,6 +42,8 @@ public class SignServiceImpl implements SingService {
 	@Override
 	public Member join(Member member) {
 		logger.info("[ServiceImpl CALL] join :" + member.toString());
+		//Get time
+		member.setJoindate(new Date(System.currentTimeMillis()));		
 		return memberDao.persist(member);
 	}
 }
