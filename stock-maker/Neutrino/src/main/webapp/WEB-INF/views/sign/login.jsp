@@ -115,7 +115,7 @@
 	  <hr>
 
 	  <footer>
-		<p>Â© euiseok.yang 2012</p>
+		<p>� euiseok.yang@gmail.com 2012</p>
 	  </footer>
 
 	</div><!--/.fluid-container-->
