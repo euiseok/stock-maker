@@ -11,7 +11,7 @@
 	<meta name="author"	content="euiseok.yang@gmail.com">
 
 	<!-- Le styles -->
-	<link href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" rel="stylesheet">
+	<link href="resources/css/bootstrap.css" rel="stylesheet">
 	<style type="text/css">
 	  body {
 		padding-top: 60px;
@@ -21,7 +21,7 @@
 		padding: 9px 0;
 	  }
 	</style>
-	<link href="http://twitter.github.com/bootstrap/assets/css/bootstrap-responsive.css" rel="stylesheet">
+	<link href="resources/css/bootstrap-responsive.css" rel="stylesheet">
 
 	<!-- Le	HTML5 shim,	for	IE6-8 support of HTML5 elements	-->
 	<!--[if	lt IE 9]>
@@ -151,7 +151,7 @@
 	  <hr>
 
 	  <footer>
-		<p>© euiseok.yang 2012</p>
+		<p>© euiseok.yang@gmail.com 2012</p>
 	  </footer>
 
 	</div><!--/.fluid-container-->
@@ -178,8 +178,9 @@
 		$(document).ready(function(){
 			//Loading indicator
 			//공통 JS로 추출 바람
+			//처리메시지도 locale로 변경 가능한지?
 			$(document).ajaxStart(function(){
-				$.blockUI({message:'<h3><img src="resources/images/ajax-loader.gif"/>Processing..</h3>'});
+				$.blockUI({message:'<h3><img src="resources/img/ajax-loader.gif"/>Processing..</h3>'});
 				})
 				.ajaxStop(function(){
 					$.unblockUI();
@@ -200,6 +201,8 @@
 					});
 				}
 			});
+			
+			// ---------------- Event area End --------------------
 		});
 	</script>
   </body>
