@@ -41,9 +41,8 @@ public class SignServiceImpl implements SingService {
 	 */
 	@Override
 	public Member join(Member member) {
-		logger.info("[ServiceImpl CALL] join :" + member.toString());
-		//Get time
-		member.setJoindate(new Date(System.currentTimeMillis()));		
+		member.setJoindate(new Date(System.currentTimeMillis()));				//Get time
+		logger.info("[ServiceImpl CALL] join :" + member.toString());				
 		return memberDao.persist(member);
 	}
 }

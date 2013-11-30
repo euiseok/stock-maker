@@ -39,7 +39,6 @@ public class SignController {
 	
 	@RequestMapping(value="/sign/join", method=RequestMethod.POST)
 	public String join(@ModelAttribute Member member,BindingResult bindingResult) {
-		logger.info("[JOIN CALL]");
 		signService.join(member);
 		return "sign/login";
 	}		

@@ -90,4 +90,17 @@ public class Member {
 	public void setJoindate(Date joindate) {
 		this.joindate = joindate;
 	}
+	
+	@Override
+	public String toString(){
+		StringBuilder sb = new StringBuilder();
+		sb.append("[Member/")
+		.append("email:"+this.email)
+		.append(",name:"+this.name)
+		.append(",password:"+this.password)
+		.append(",region:"+this.region)
+		.append(",joindate:"+this.joindate+"]");
+		
+		return sb.toString();
+	}
 }

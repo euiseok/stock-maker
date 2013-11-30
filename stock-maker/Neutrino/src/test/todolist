@@ -1,0 +1,19 @@
+Do list
+2013.11.24
+새로 시작!!
+2013.11.25
+resource / bootstrap-css 추가
+2013.12.01
+회원가입 추가 - post / @modelAttribute
+UTF-8 filter 설정
+
+To do List
+1. apply logging aspect
+2. json 사용
+3. 로그인하면 My page로 redirect
+   - 최근 로그인 일자
+4. 로그인에 따라서 보여지는 권한 체크
+   - Spring Security
+5. 게시판 구현
+6. node.js 사용
+7. WAS(tomcat) 앞단에 nginx를 두어 분산 처리까지 구현

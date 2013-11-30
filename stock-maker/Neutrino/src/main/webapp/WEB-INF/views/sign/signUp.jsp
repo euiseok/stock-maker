@@ -99,35 +99,35 @@
 		    <h1>Sign up</h1>
 		  </div>
 		  <div class="row-fluid">
-			<form class="form-horizontal" id="member">
+			<form class="form-horizontal" id="member" action="sign/join" method="post">
 				<div class="control-group">
 					<label class="control-label" for="email"><code>E-mail</code></label>
 					<div class="controls">
-						<input type="text" class="input-xlarge" id="email">
+						<input type="text" class="input-xlarge" name="email" id="email">
 						<p class="help-block">e-mail을 입력하세요.</p>
 					</div>
 					
 					<label class="control-label" for="password"><code>비밀번호</code></label>
 					<div class="controls">
-						<input type="text" class="input-xlarge" id="password">
+						<input type="text" class="input-xlarge" name="password">
 						<p class="help-block">비밀번호를 입력하세요.</p>
 					</div>
 					
 					<label class="control-label" for="passwordRepeat"><code>비밀번호 reapeat</code></label>
 					<div class="controls">
-						<input type="text" class="input-xlarge" id="passwordRepeat">
+						<input type="text" class="input-xlarge" name="passwordRepeat">
 						<p class="help-block">비밀번호를 다시 입력하세요.</p>
 					</div>
 										
 					<label class="control-label" for="name"><code>이름</code></label>
 					<div class="controls">
-						<input type="text" class="input-xlarge" id="name">
+						<input type="text" class="input-xlarge" name="name">
 						<p class="help-block">이름을 입력하세요.</p>
 					</div>
 										
 					<label class="control-label" for="regionCode"><code>지역선택</code></label>
 					<div class="controls docs-input-sizes">
-						<select class="span2" id="regionCode">
+						<select class="span2" name="region">
 							<option value='A1'>Asia</option>
 							<option value='B1'>Europe</option>
 							<option value='C1'>Africa</option>
@@ -140,7 +140,7 @@
 				</div>
 
 				<div class="form-actions">
-					<button type="submit" class="btn btn-primary" id="virSave">Save</button>
+					<button type="submit" class="btn btn-primary" id="join">Save</button>
 					<button class="btn">Cancel</button>
 				</div>
 			</form>
