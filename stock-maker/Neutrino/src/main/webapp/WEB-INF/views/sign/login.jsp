@@ -11,7 +11,7 @@
 	<meta name="author"	content="euiseok.yang@gmail.com">
 
 	<!-- Le styles -->
-	<link href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" rel="stylesheet">
+	<link href="resources/css/bootstrap.css" rel="stylesheet">
 	<style type="text/css">
 	  body {
 		padding-top: 60px;
@@ -21,7 +21,7 @@
 		padding: 9px 0;
 	  }
 	</style>
-	<link href="http://twitter.github.com/bootstrap/assets/css/bootstrap-responsive.css" rel="stylesheet">
+	<link href="resources/css/bootstrap-responsive.css" rel="stylesheet">
 
 	<!-- Le	HTML5 shim,	for	IE6-8 support of HTML5 elements	-->
 	<!--[if	lt IE 9]>
