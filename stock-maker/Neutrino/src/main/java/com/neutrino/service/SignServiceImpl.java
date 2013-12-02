@@ -21,7 +21,7 @@ public class SignServiceImpl implements SingService {
 	MemberDao memberDao;
 	
 	/*
-	 * Email ÁÖ¼Ò°¡ ±âÁ¸¿¡ µî·ÏµÇ¾î ÀÖ´ÂÁö È®ÀÎ ÇÏ´Â ¸Ş¼Òµå
+	 * Email ì£¼ì†Œë¡œ ê¸°ì¡´ ê°€ì…ì •ë³´ í™•ì¸ - json
 	 * @see com.neutrino.service.SingService#isRegisteredEmail(java.lang.String)
 	 */
 	@Override
@@ -36,13 +36,13 @@ public class SignServiceImpl implements SingService {
 	}
 	
 	/*
-	 * È¸¿øÁ¤º¸ °¡ÀÔ
+	 * íšŒì›ì •ë³´ DB ì €ì¥
 	 * @see com.neutrino.service.SingService#join(com.neutrino.model.Member)
 	 */
 	@Override
-	public Member join(Member member) {
+	public void join(Member member) {
 		member.setJoindate(new Date(System.currentTimeMillis()));				//Get time
 		logger.info("[ServiceImpl CALL] join :" + member.toString());				
-		return memberDao.persist(member);
+		memberDao.persist(member);
 	}
 }

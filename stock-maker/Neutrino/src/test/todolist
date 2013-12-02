@@ -6,6 +6,8 @@ resource / bootstrap-css 추가
 2013.12.01
 회원가입 추가 - post / @modelAttribute
 UTF-8 filter 설정
+2013.12.02
+hibernate Session Factory 사용
 
 To do List
 1. apply logging aspect
@@ -17,3 +19,7 @@ To do List
 5. 게시판 구현
 6. node.js 사용
 7. WAS(tomcat) 앞단에 nginx를 두어 분산 처리까지 구현
+8. 여러개의 DB를 두어 jta를 사용할 수 있도록
+9. root-context.xml에 DI bean list를 component scan할 수 있도록 autowired 처리 
+10. DDD기법을 사용하여 project rebuild
+11. 회원가입후 page redriect 처리 보완 - resource에 대한 요청이 /spring/sign/resources/js/bootstrap- ~~ 이런식으로 변경 됨

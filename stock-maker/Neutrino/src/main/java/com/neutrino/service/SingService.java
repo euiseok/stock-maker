@@ -9,5 +9,5 @@ public interface SingService {
 	@Transactional(readOnly=true)
 	public boolean isRegisteredEmail(String email);
 	
-	public Member join(Member member);
+	public void join(Member member);
 }

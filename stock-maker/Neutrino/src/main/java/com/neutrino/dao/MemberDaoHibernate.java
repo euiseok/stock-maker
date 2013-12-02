@@ -6,6 +6,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.hibernate.Query;
 import org.hibernate.Session;
+import org.hibernate.SessionFactory;
 import org.springframework.orm.hibernate3.HibernateCallback;
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 import org.springframework.stereotype.Repository;
@@ -13,18 +14,30 @@ import org.springframework.stereotype.Repository;
 import com.neutrino.model.Member;
 
 @Repository
-public class MemberDaoHibernate extends HibernateDaoSupport implements MemberDao{
+public class MemberDaoHibernate implements MemberDao{
 
 	private static final Logger logger = LoggerFactory.getLogger(MemberDaoHibernate.class);
 	
+	private SessionFactory sessionFactory;
+	
+	public void setSessionFactory(SessionFactory sessionFactory) {
+		this.sessionFactory = sessionFactory;
+	}
+
 	/*
 	 * Hibernate named query - Member Entity
 	 * @see com.neutrino.dao.MemberDao#findById(java.lang.String)
 	 */
-	@SuppressWarnings({ "unchecked", "rawtypes" })
 	@Override
 	public Member findById(final String email) {
 		logger.info("[Hibernate] findById:" + email);
+		
+		Query query = sessionFactory.getCurrentSession().getNamedQuery("com.neutrino.model.memberByEmail");
+		query.setString("email",email);
+		
+		return  (Member)query.uniqueResult();
+		
+		/*
 		return (Member)getHibernateTemplate().execute(new HibernateCallback(){
 			@Override
 			public Object doInHibernate(Session session){
@@ -32,16 +45,18 @@ public class MemberDaoHibernate extends HibernateDaoSupport implements MemberDao
 				query.setString("email",email);
 				return (Member)query.uniqueResult();
 			}});
+		*/
 	}
 	
 	/*
 	 * Hibernate API 
-	 * merge : «ÿ¥Á ID∑Œ ∞™¿Ã ¡∏¿Á«œ∏È «ÿ¥Á ∞¥√º ∏Æ≈œ, «ÿ¥Á ∞™¿Ã æ¯¿∏∏È ¿˙¿Â
+	 * merge : ÌöåÏõêÍ∞ÄÏûÖ - hibernateÎ°ú Íµ¨ÌòÑ Ìï®
 	 * @see com.neutrino.dao.MemberDao#save(com.neutrino.model.Member)
 	 */
 	@Override
-	public Member persist(Member member) {
+	public void persist(Member member) {
 		logger.info("[Hibernate] persist:" + member.toString());
-		return (Member)getHibernateTemplate().merge(member);
+		sessionFactory.getCurrentSession().save(member);
+		//return (Member)getHibernateTemplate().merge(member);
 	}
 }
