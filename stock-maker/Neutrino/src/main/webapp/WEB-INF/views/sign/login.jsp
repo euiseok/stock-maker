@@ -6,6 +6,7 @@
 	<meta http-equiv="Content-Type"	content="text/html;	charset=UTF-8">
 	<meta charset="utf-8">
 	<title>Spring education</title>
+	<!-- viewport :	Webkit 기반	브라우져의 설정	/ Device 설정에	기반 -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="HTML5	base Spring	code education">
 	<meta name="author"	content="euiseok.yang@gmail.com">
@@ -32,11 +33,13 @@
 	<!-- Favicon -->
 	<link rel="shortcut	icon" href="http://twitter.github.com/bootstrap/assets/ico/favicon.ico">
 	<!-- Apple icon	-->
+	<!-- 변경해야 함!!! -->
 	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-144-precomposed.png">
 	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-114-precomposed.png">
 	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-72-precomposed.png">
 	<link rel="apple-touch-icon-precomposed" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-57-precomposed.png">
   </head>
+
 
   <body>
 	<!-- nav -->
@@ -100,13 +103,13 @@
 		  </div>
 		  <div class="row-fluid">
 			<form class="well form-inline">
-			  <label>User name</label>
-			  <input type="text" class="input-small" placeholder="Email">
-			  <input type="password" class="input-small" placeholder="Password">
-			  <label class="checkbox">
-			    <input type="checkbox"> Remember me
-			  </label>
-			  <button type="submit" class="btn">Sign in</button>
+				<label>User name</label>
+				<input type="text" class="input-small" placeholder="Email">
+				<input type="password" class="input-small" placeholder="Password">
+				<label class="checkbox">
+					<input type="checkbox"> Remember me
+				</label>
+				<button type="submit" class="btn">Sign in</button>
 			</form>
 		  </div><!--/row-->
 		</div><!--/span-->
@@ -115,7 +118,7 @@
 	  <hr>
 
 	  <footer>
-		<p>� euiseok.yang@gmail.com 2012</p>
+		<p>© euiseok.yang@gmail.com 2012</p>
 	  </footer>
 
 	</div><!--/.fluid-container-->

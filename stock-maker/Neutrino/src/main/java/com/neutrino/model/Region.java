@@ -11,7 +11,7 @@ public enum Region {
 	private final String description;
 
 	/*
-	 * Enum mechanism À» ÅëÇØ Á¢±Ù °¡´ÉÇÏ¹Ç·Î Private
+	 * Enum mechanismì„ ì´ìš©í•˜ì—¬ êµ¬í˜„
 	 */
 	private Region(String description) {
 		this.description = description;
