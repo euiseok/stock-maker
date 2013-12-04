@@ -19,6 +19,9 @@ import javax.persistence.TemporalType;
 @NamedQueries({
 	@NamedQuery(name="com.neutrino.model.memberByEmail",
 			query="from Member as member where email=:email"
+	),	
+	@NamedQuery(name="com.neutrino.model.login",
+			query="from Member as member where email=:email and password = :password"
 	)
 })
 public class Member {
@@ -39,16 +42,21 @@ public class Member {
 	@Column(name="JOINDATE",nullable=false)
 	private Date joindate;
 	
+	@Temporal(TemporalType.DATE)
+	@Column(name="LAST_ACCESS_DATE",nullable=true)
+	private Date lastAcessDate;
+	
 	public Member(){}
 	
 	public Member(String email, String name, String password, Region region,
-			Date joindate) {
+			Date joindate, Date lastAcessDate) {
 		super();
 		this.email = email;
 		this.name = name;
 		this.password = password;
 		this.region = region;
 		this.joindate = joindate;
+		this.lastAcessDate = lastAcessDate;
 	}
 
 	public String getEmail() {
@@ -91,6 +99,14 @@ public class Member {
 		this.joindate = joindate;
 	}
 	
+	public Date getLastAcessDate() {
+		return lastAcessDate;
+	}
+
+	public void setLastAcessDate(Date lastAcessDate) {
+		this.lastAcessDate = lastAcessDate;
+	}
+
 	@Override
 	public String toString(){
 		StringBuilder sb = new StringBuilder();
@@ -99,7 +115,8 @@ public class Member {
 		.append(",name:"+this.name)
 		.append(",password:"+this.password)
 		.append(",region:"+this.region)
-		.append(",joindate:"+this.joindate+"]");
+		.append(",joindate:"+this.joindate)
+		.append(",lastAcessDate:"+this.lastAcessDate+"]");
 		
 		return sb.toString();
 	}

@@ -159,20 +159,20 @@
 	<!-- Le	javascript
 	================================================== -->
 	<!-- Placed	at the end of the document so the pages	load faster	-->
-	<script	src="resources/js/jquery.js"></script>
-	<script	src="resources/js/bootstrap-transition.js"></script>
-	<script	src="resources/js/bootstrap-alert.js"></script>
-	<script	src="resources/js/bootstrap-modal.js"></script>
-	<script	src="resources/js/bootstrap-dropdown.js"></script>
-	<script	src="resources/js/bootstrap-scrollspy.js"></script>
-	<script	src="resources/js/bootstrap-tab.js"></script>
-	<script	src="resources/js/bootstrap-tooltip.js"></script>
-	<script	src="resources/js/bootstrap-popover.js"></script>
-	<script	src="resources/js/bootstrap-button.js"></script>
-	<script	src="resources/js/bootstrap-collapse.js"></script>
-	<script	src="resources/js/bootstrap-carousel.js"></script>
-	<script	src="resources/js/bootstrap-typeahead.js"></script>
-	<script	src="resources/js/jquery.blockUI.js"></script>
+	<script	src="${pageContext.servletContext.contextPath}/resources/js/jquery.js"></script>
+	<script	src="${pageContext.servletContext.contextPath}/resources/js/bootstrap-transition.js"></script>
+	<script	src="${pageContext.servletContext.contextPath}/resources/js/bootstrap-alert.js"></script>
+	<script	src="${pageContext.servletContext.contextPath}/resources/js/bootstrap-modal.js"></script>
+	<script	src="${pageContext.servletContext.contextPath}/resources/js/bootstrap-dropdown.js"></script>
+	<script	src="${pageContext.servletContext.contextPath}/resources/js/bootstrap-scrollspy.js"></script>
+	<script	src="${pageContext.servletContext.contextPath}/resources/js/bootstrap-tab.js"></script>
+	<script	src="${pageContext.servletContext.contextPath}/resources/js/bootstrap-tooltip.js"></script>
+	<script	src="${pageContext.servletContext.contextPath}/resources/js/bootstrap-popover.js"></script>
+	<script	src="${pageContext.servletContext.contextPath}/resources/js/bootstrap-button.js"></script>
+	<script	src="${pageContext.servletContext.contextPath}/resources/js/bootstrap-collapse.js"></script>
+	<script	src="${pageContext.servletContext.contextPath}/resources/js/bootstrap-carousel.js"></script>
+	<script	src="${pageContext.servletContext.contextPath}/resources/js/bootstrap-typeahead.js"></script>
+	<script	src="${pageContext.servletContext.contextPath}/resources/js/jquery.blockUI.js"></script>
 	
 	<script type="text/javascript">
 		$(document).ready(function(){
@@ -180,7 +180,7 @@
 			//공통 JS로 추출 바람
 			//처리메시지도 locale로 변경 가능한지?
 			$(document).ajaxStart(function(){
-				$.blockUI({message:'<h3><img src="resources/img/ajax-loader.gif"/>Processing..</h3>'});
+				$.blockUI({message:'<h3><img src="${pageContext.servletContext.contextPath}/resources/img/ajax-loader.gif"/>Processing..</h3>'});
 				})
 				.ajaxStop(function(){
 					$.unblockUI();

@@ -8,6 +8,8 @@ resource / bootstrap-css 추가
 UTF-8 filter 설정
 2013.12.02
 hibernate Session Factory 사용
+2013.12.03
+resource와 같은 절대경로 참조시에는 ${pageContext.servletContext.contextPath}/ 사용 
 
 To do List
 1. apply logging aspect
@@ -17,9 +19,16 @@ To do List
 4. 로그인에 따라서 보여지는 권한 체크
    - Spring Security
 5. 게시판 구현
-6. node.js 사용
+6. node.js 사용으로 회원간 채팅
 7. WAS(tomcat) 앞단에 nginx를 두어 분산 처리까지 구현
 8. 여러개의 DB를 두어 jta를 사용할 수 있도록
 9. root-context.xml에 DI bean list를 component scan할 수 있도록 autowired 처리 
 10. DDD기법을 사용하여 project rebuild
-11. 회원가입후 page redriect 처리 보완 - resource에 대한 요청이 /spring/sign/resources/js/bootstrap- ~~ 이런식으로 변경 됨
+11. jsp 페이지의 공통부분, js공통 부분 추출하여 모듈화
+    jsp - header / trailer
+12. login 구현 후 mypage로 이동하여 최근 접속시간을 보여 줌 - 해당 비지니스 구현 및 db 확장 필요
+13. 회원가입시 특수문자 (@, .이 구분되어 저장이 안됨. 예)sss@gmai.com 이면 db에 sss@gmai 까지 저장 됨)
+14. NULL컬럼을 가져왔을때 vo객체에서 어떻게 처리해야 하는지?
+15. 예외조작에 따른 화면의 paging 처리 - DB예외처리를 어느정도 까지 프레임워크가 커버하는지?
+16. 페이지 전환을 관리할 수 있는 것. return view ~~ / suffix가 아닌.  먼가 DB?
+17. 페이지 리턴하면서 경로정보 수정 필요 http://localhost:8080/spring/sign/login = > http://localhost:8080/spring/sign/sign/login
