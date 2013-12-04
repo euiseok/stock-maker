@@ -40,9 +40,23 @@ public class SignServiceImpl implements SingService {
 	 * @see com.neutrino.service.SingService#join(com.neutrino.model.Member)
 	 */
 	@Override
-	public void join(Member member) {
+	public void join(Member member){
 		member.setJoindate(new Date(System.currentTimeMillis()));				//Get time
 		logger.info("[ServiceImpl CALL] join :" + member.toString());				
 		memberDao.persist(member);
+	}
+	
+	/*
+	 * 로그인
+	 */
+	@Override
+	public Member login(Member member){
+		logger.info("[ServiceImpl CALL] login :" + member.toString());
+		Member loginMember = memberDao.login(member);
+		//후처리 기능 추가
+		if(loginMember!=null){
+			logger.info("[Member] 최근 접속시간 update Dao 호출");
+		}		
+		return loginMember;
 	}
 }

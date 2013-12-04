@@ -4,6 +4,8 @@ package com.neutrino.dao;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.hibernate.HibernateException;
+import org.hibernate.NonUniqueResultException;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -36,16 +38,6 @@ public class MemberDaoHibernate implements MemberDao{
 		query.setString("email",email);
 		
 		return  (Member)query.uniqueResult();
-		
-		/*
-		return (Member)getHibernateTemplate().execute(new HibernateCallback(){
-			@Override
-			public Object doInHibernate(Session session){
-				Query query = getSession().getNamedQuery("com.neutrino.model.memberByEmail");
-				query.setString("email",email);
-				return (Member)query.uniqueResult();
-			}});
-		*/
 	}
 	
 	/*
@@ -56,7 +48,39 @@ public class MemberDaoHibernate implements MemberDao{
 	@Override
 	public void persist(Member member) {
 		logger.info("[Hibernate] persist:" + member.toString());
-		sessionFactory.getCurrentSession().save(member);
-		//return (Member)getHibernateTemplate().merge(member);
+		
+		try{
+			sessionFactory.getCurrentSession().save(member);
+		}catch(NonUniqueResultException nure){
+			logger.debug("[Hibernate] persist:" + member.toString());
+		}catch(HibernateException he){
+			logger.error("[Hibernate] Selete Exception:" + he.toString());
+		}catch(Exception e){
+			logger.error("[System] Exception:" + e.toString());
+		}
+	}
+	
+	/*
+	 * Hibernate API 
+	 * merge : 회원가입 - hibernate로 구현 함
+	 * @see com.neutrino.dao.MemberDao#save(com.neutrino.model.Member)
+	 */
+	@Override
+	public Member login(Member member) {
+		Query query = sessionFactory.getCurrentSession().getNamedQuery("com.neutrino.model.login");
+		query.setString("email",member.getEmail());
+		query.setString("password",member.getPassword());
+		
+		try{
+			member = (Member)query.uniqueResult();
+		}catch(NonUniqueResultException nure){
+			logger.debug("[Hibernate] persist:" + member.toString());
+		}catch(HibernateException he){
+			logger.error("[Hibernate] Selete Exception:" + he.toString());
+		}catch(Exception e){
+			logger.error("[System] Exception:" + e.toString());
+		}		
+		
+		return  member;
 	}
 }

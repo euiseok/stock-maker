@@ -12,7 +12,7 @@
 	<meta name="author"	content="euiseok.yang@gmail.com">
 
 	<!-- Le styles -->
-	<link href="resources/css/bootstrap.css" rel="stylesheet">
+	<link href="${pageContext.servletContext.contextPath}/resources/css/bootstrap.css" rel="stylesheet">
 	<style type="text/css">
 	  body {
 		padding-top: 60px;
@@ -22,7 +22,7 @@
 		padding: 9px 0;
 	  }
 	</style>
-	<link href="resources/css/bootstrap-responsive.css" rel="stylesheet">
+	<link href="${pageContext.servletContext.contextPath}/resources/css/bootstrap-responsive.css" rel="stylesheet">
 
 	<!-- Le	HTML5 shim,	for	IE6-8 support of HTML5 elements	-->
 	<!--[if	lt IE 9]>
@@ -151,18 +151,18 @@
 	<!-- Javascript
 	================================================== -->
 	<!-- Placed	at the end of the document so the pages	load faster	-->
-	<script	src="resources/js/jquery.js"></script>
-	<script	src="resources/js/bootstrap-transition.js"></script>
-	<script	src="resources/js/bootstrap-alert.js"></script>
-	<script	src="resources/js/bootstrap-modal.js"></script>
-	<script	src="resources/js/bootstrap-dropdown.js"></script>
-	<script	src="resources/js/bootstrap-scrollspy.js"></script>
-	<script	src="resources/js/bootstrap-tab.js"></script>
-	<script	src="resources/js/bootstrap-tooltip.js"></script>
-	<script	src="resources/js/bootstrap-popover.js"></script>
-	<script	src="resources/js/bootstrap-button.js"></script>
-	<script	src="resources/js/bootstrap-collapse.js"></script>
-	<script	src="resources/js/bootstrap-carousel.js"></script>
-	<script	src="resources/js/bootstrap-typeahead.js"></script>
+	<script	src="${pageContext.servletContext.contextPath}/resources/js/jquery.js"></script>
+	<script	src="${pageContext.servletContext.contextPath}/resources/js/bootstrap-transition.js"></script>
+	<script	src="${pageContext.servletContext.contextPath}/resources/js/bootstrap-alert.js"></script>
+	<script	src="${pageContext.servletContext.contextPath}/resources/js/bootstrap-modal.js"></script>
+	<script	src="${pageContext.servletContext.contextPath}/resources/js/bootstrap-dropdown.js"></script>
+	<script	src="${pageContext.servletContext.contextPath}/resources/js/bootstrap-scrollspy.js"></script>
+	<script	src="${pageContext.servletContext.contextPath}/resources/js/bootstrap-tab.js"></script>
+	<script	src="${pageContext.servletContext.contextPath}/resources/js/bootstrap-tooltip.js"></script>
+	<script	src="${pageContext.servletContext.contextPath}/resources/js/bootstrap-popover.js"></script>
+	<script	src="${pageContext.servletContext.contextPath}/resources/js/bootstrap-button.js"></script>
+	<script	src="${pageContext.servletContext.contextPath}/resources/js/bootstrap-collapse.js"></script>
+	<script	src="${pageContext.servletContext.contextPath}/resources/js/bootstrap-carousel.js"></script>
+	<script	src="${pageContext.servletContext.contextPath}/resources/js/bootstrap-typeahead.js"></script>
   </body>
 </html>
