@@ -1,0 +1,9 @@
+# Introduction #
+DB연결 방식
+
+
+# Details #
+1. Hibernate 사용
+2. 주기적 DB변경에 따라 middlegen pulg-in 사용
+> http://www.javajigi.net/pages/viewpage.action?pageId=267
+3.
